@@ -1,0 +1,35 @@
+{
+  "name"            : "glob-filter",
+  "version"         : "0.0.0",
+  "description"     : "Filter chains, event emitter style, with globs and callbacks",
+  "keywords"        : ["glob", "filter", "chain", "callback", "async", "emitter"],
+  "author"          : "Maximilian Antoni (http://maxantoni.de)",
+  "homepage"        : "https://github.com/mantoni/glob-filter.js",
+  "main"            : "./lib/filter.js",
+  "engines"         : {
+    "node"          : ">=0.10"
+  },
+  "scripts"         : {
+    "start"         : "mocha --watch",
+    "lint"          : "jslint --color './**/*.js'",
+    "test-wd"       : "mochify --wd",
+    "test"          : "npm run lint && mocha && mochify --cover"
+  },
+  "repository"      : {
+    "type"          : "git",
+    "url"           : "https://github.com/mantoni/glob-filter.js.git"
+  },
+  "dependencies"    : {
+    "inherits"      : "^2.0",
+    "listen"        : "^1.0",
+    "glob-events"   : "~0.4.1",
+    "min-filter"    : "~0.1.0"
+  },
+  "devDependencies" : {
+    "mocha"         : "^1.17",
+    "jslint"        : "~0.3.3",
+    "mochify"       : "~0.9.0"
+  },
+  "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"],
+  "license"         : "MIT"
+}
