@@ -1,6 +1,6 @@
 {
   "name"            : "glob-filter",
-  "version"         : "0.0.0",
+  "version"         : "0.1.0",
   "description"     : "Filter chains, event emitter style, with globs and callbacks",
   "keywords"        : ["glob", "filter", "chain", "callback", "async", "emitter"],
   "author"          : "Maximilian Antoni (http://maxantoni.de)",
