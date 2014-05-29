@@ -20,10 +20,11 @@
     "url"           : "https://github.com/mantoni/glob-filter.js.git"
   },
   "dependencies"    : {
-    "inherits"      : "^2.0",
-    "listen"        : "^1.0",
+    "inherits"      : "^2.0.1",
+    "listen"        : "^1.0.0",
     "glob-events"   : "~0.4.1",
-    "min-filter"    : "~0.1.0"
+    "min-filter"    : "~0.1.0",
+    "min-iterator"  : "~0.1.1"
   },
   "devDependencies" : {
     "mocha"         : "^1.17",

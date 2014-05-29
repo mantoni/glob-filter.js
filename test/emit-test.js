@@ -233,4 +233,29 @@ describe('emit', function () {
     assert.deepEqual(l.calls[0].args, [null, 42]);
   });
 
+  it('invokes function before callback as last filter function', function () {
+    e.addFilter('a', function (next, callback) {
+      next(function (v) {
+        callback(v * 7);
+      });
+    });
+
+    var res;
+    e.emit('a', function (callback) {
+      callback(2 * 3);
+    }, function (v) {
+      res = v;
+    });
+
+    assert.equal(res, 42);
+  });
+
+  it('invokes function before callback with same scope', function () {
+    var l = util.stub();
+
+    e.emit('a', l, util.noop());
+
+    assert.deepEqual(l.calls[0].scope.event, 'a');
+  });
+
 });

@@ -40,6 +40,17 @@ globFilter.emit('foo.bar', function (err, value) {
 });
 ```
 
+You can pass one additional filter to invoke at the end of the filter chain to
+`emit`:
+
+```js
+globFilter.emit('foo.bar', function (callback) {
+  callback(null, 42);
+}, function (err, value) {
+  assert.equal(value, 42);
+});
+```
+
 ## Install with npm
 
 ```
