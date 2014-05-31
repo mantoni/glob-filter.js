@@ -130,7 +130,7 @@ describe('emit', function () {
     var l = util.stub();
     e.addFilter('a', l);
 
-    e.emit('a', 42, [], null, 'str');
+    e.emit({ event : 'a', args : [42, [], null, 'str'] });
 
     assert.deepEqual(l.calls[0].scope.args, [42, [], null, 'str']);
   });
@@ -140,6 +140,15 @@ describe('emit', function () {
     e.addFilter('a', l);
 
     e.emit('a');
+
+    assert.deepEqual(l.calls[0].scope.args, []);
+  });
+
+  it('defaults args to empty array if object is given', function () {
+    var l = util.stub();
+    e.addFilter('a', l);
+
+    e.emit({ event : 'a' });
 
     assert.deepEqual(l.calls[0].scope.args, []);
   });

@@ -50,9 +50,9 @@ describe('filterOnce', function () {
       args = this.args;
     });
 
-    e.emit('such', 'args', { much : 'wow' });
+    e.emit({ event : 'such', args : ['much', 'wow'] });
 
-    assert.deepEqual(args, ['args', { much : 'wow' }]);
+    assert.deepEqual(args, ['much', 'wow']);
   });
 
   it('emits "newFilter" event', function () {
