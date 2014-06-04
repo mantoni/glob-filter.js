@@ -111,7 +111,7 @@ describe('emit', function () {
     e.addFilter('*', l1);
     e.addFilter('a', l2);
 
-    e.emit({ event : '*', listeners : false });
+    e.emit({ event : 'a', listeners : false });
 
     assert.equal(l1.calls.length, 1);
     assert.equal(l2.calls.length, 0);

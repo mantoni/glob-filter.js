@@ -22,7 +22,7 @@
   "dependencies"    : {
     "inherits"      : "^2.0.1",
     "listen"        : "^1.0.0",
-    "glob-events"   : "~0.4.1",
+    "glob-events"   : "~0.5.0",
     "min-filter"    : "~0.2.0",
     "min-iterator"  : "~0.1.1"
   },
