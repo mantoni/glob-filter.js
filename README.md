@@ -18,6 +18,16 @@ asynchronously.
 - Test suite runs on Node.js 0.10, PhantomJS, Chrome, Firefox and IE 9 / 10
   with 100% code coverage
 
+## Install with npm
+
+```
+npm install glob-filter
+```
+
+## Browser support
+
+Use [Browserify](http://browserify.org) to create a standalone file.
+
 ## Usage
 
 ```js
@@ -50,16 +60,6 @@ globFilter.emit('foo.bar', function (callback) {
   assert.equal(value, 42);
 });
 ```
-
-## Install with npm
-
-```
-npm install glob-filter
-```
-
-## Browser support
-
-Use [Browserify](http://browserify.org) to create a standalone file.
 
 ## License
 
