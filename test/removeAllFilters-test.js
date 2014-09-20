@@ -10,7 +10,7 @@
 
 var assert = require('assert');
 var Filter = require('../lib/filter').Filter;
-var util = require('./util');
+var util = require('./fixture/util');
 
 
 describe('removeAllListeners', function () {
