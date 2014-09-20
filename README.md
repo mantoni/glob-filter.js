@@ -1,14 +1,14 @@
-# glob-filter.js [![Build Status](https://travis-ci.org/mantoni/glob-filter.js.png?branch=master)](http://travis-ci.org/mantoni/glob-filter.js)
+# glob-filter.js
+
+[![Build Status]](https://travis-ci.org/mantoni/glob-filter.js)
+[![SemVer]](http://semver.org)
+[![License]](https://github.com/mantoni/glob-filter.js/blob/master/LICENSE)
 
 Filter chains, event emitter style, with globs and callbacks.
 
 Register filters on a [glob store][] and process matching [filter chains][].
 Callbacks may be used in each filter to pass back errors or values
 asynchronously.
-
-Repository: <https://github.com/mantoni/glob-filter.js>
-
----
 
 ## Features
 
@@ -65,5 +65,8 @@ Use [Browserify](http://browserify.org) to create a standalone file.
 
 MIT
 
+[Build Status]: http://img.shields.io/travis/mantoni/glob-filter.js.svg
+[SemVer]: http://img.shields.io/:semver-%E2%9C%93-brightgreen.svg
+[License]: http://img.shields.io/npm/l/glob-filter.svg
 [glob store]: https://github.com/mantoni/glob-store.js
 [filter chains]: https://github.com/mantoni/min-filter.js
