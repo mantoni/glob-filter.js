@@ -99,10 +99,12 @@ describe('removeAllListeners', function () {
 
   it('still emits "removeFilter" afterwards', function () {
     e.removeAllFilters();
+    var f = util.noop();
     var s = util.stub();
     e.addFilter('removeFilter', s);
+    e.addFilter('a', f);
 
-    e.removeFilter('a', util.noop());
+    e.removeFilter('a', f);
 
     assert.equal(s.calls.length, 1);
   });

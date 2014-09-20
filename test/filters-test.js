@@ -116,4 +116,31 @@ describe('filters', function () {
     assert.deepEqual(a, []);
   });
 
+  it('returns filters with same name in add  order by default', function () {
+    var l1 = util.noop();
+    var l2 = util.noop();
+    var l3 = util.noop();
+    e.addFilter('a', l1);
+    e.addFilter('a', l2);
+    e.addFilter('a', l3);
+
+    var a = e.filters('a');
+
+    assert.deepEqual(a, [l1, l2, l3]);
+  });
+
+  it('returns filters with same name in reverse order', function () {
+    e = new Filter({ reverse : true });
+    var l1 = util.noop();
+    var l2 = util.noop();
+    var l3 = util.noop();
+    e.addFilter('a', l1);
+    e.addFilter('a', l2);
+    e.addFilter('a', l3);
+
+    var a = e.filters('a');
+
+    assert.deepEqual(a, [l3, l2, l1]);
+  });
+
 });
