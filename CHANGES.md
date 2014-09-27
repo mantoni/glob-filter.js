@@ -1,5 +1,9 @@
 # Changes
 
+## 1.0.1
+
+- Improve the documentation dramatically
+
 ## 1.0.0
 
 - Use `min-iterator` 1.0
