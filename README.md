@@ -102,7 +102,7 @@ gf.emit('foo.bar', function (callback) {
 
 ## GlobFilter API
 
-- `emit(event[, then][, callback])`: Invokes all listeners registered for the
+- `emit(event[, then][, callback])`: Invokes all filters registered for the
   given event. Matching rules are applied on the event name as descibed in the
   [glob-tree match expressions][]. If a callback is passed, it will be invoked
   after all filters returned. If a `then` function is passed, it will be
