@@ -59,7 +59,7 @@ describe('filterOnce', function () {
     var s = util.stub();
     var f = util.noop();
 
-    e.addFilter('newListener', s);
+    e.addFilter('newFilter', s);
     e.filterOnce('a', f);
 
     assert.equal(s.calls.length, 1);

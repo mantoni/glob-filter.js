@@ -267,4 +267,22 @@ describe('emit', function () {
     assert.deepEqual(l.calls[0].scope.event, 'a');
   });
 
+  it('does not emit "newFilter"', function () {
+    var l = util.stub();
+    e.addFilter('newFilter', l);
+
+    e.emit('*');
+
+    assert.equal(l.calls.length, 0);
+  });
+
+  it('does not emit "removeFilter"', function () {
+    var l = util.stub();
+    e.addFilter('removeFilter', l);
+
+    e.emit('*');
+
+    assert.equal(l.calls.length, 0);
+  });
+
 });
