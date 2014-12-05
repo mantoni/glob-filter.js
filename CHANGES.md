@@ -1,5 +1,10 @@
 # Changes
 
+## 1.1.0
+
+- Add `filterIterator`
+- Expose and reuse glob-events `toScope`
+
 ## 1.0.1
 
 - Improve the documentation dramatically
