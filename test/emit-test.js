@@ -93,6 +93,18 @@ describe('emit', function () {
     }, TypeError);
   });
 
+  it('does not emit other event than defined on object', function () {
+    var la = util.stub();
+    var lb = util.stub();
+    e.addFilter('a', la);
+    e.addFilter('b', lb);
+
+    e.emit({ event : 'b' });
+
+    assert.equal(la.calls.length, 0);
+    assert.equal(lb.calls.length, 1);
+  });
+
   it('allows to exclude matchers', function () {
     var l1 = util.stub();
     var l2 = util.stub();
