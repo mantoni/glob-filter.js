@@ -1,5 +1,9 @@
 # Changes
 
+## 1.1.1
+
+- Don't invoke all filters when passing an object to `emit`
+
 ## 1.1.0
 
 - Add `filterIterator`
