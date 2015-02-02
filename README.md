@@ -6,7 +6,7 @@
 
 Filter chains, event emitter style, with globs and callbacks.
 
-Register filters using [glog events][] and process matching [filter chains][].
+Register filters using [glob events][] and process matching [filter chains][].
 Callbacks may be used in each filter to pass back errors or values
 asynchronously.
 
