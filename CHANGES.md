@@ -1,5 +1,10 @@
 # Changes
 
+## 1.2.0
+
+- Add `removeMatchingFilters(event)`
+- Only emit remove event in `removeAllFilters` for exact matches
+
 ## 1.1.1
 
 - Don't invoke all filters when passing an object to `emit`
