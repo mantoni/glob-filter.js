@@ -13,7 +13,7 @@ var Filter = require('../lib/filter').Filter;
 var util = require('./fixture/util');
 
 
-describe('removeAllListeners', function () {
+describe('removeAllFilters', function () {
   var e;
 
   beforeEach(function () {
@@ -32,18 +32,17 @@ describe('removeAllListeners', function () {
 
   it('emits "removeFilter" for each named listener', function () {
     var a = util.noop();
-    var b = util.noop();
     var s = util.stub();
     e.addFilter('removeFilter', s);
+    e.addFilter('**', util.noop());
     e.addFilter('a.*', a);
-    e.addFilter('a.b', b);
+    e.addFilter('a.b', util.noop());
     e.addFilter('b.c', util.noop());
 
     e.removeAllFilters('a.*');
 
-    assert.equal(s.calls.length, 2);
+    assert.equal(s.calls.length, 1);
     assert.deepEqual(s.calls[0].scope.args, ['a.*', a]);
-    assert.deepEqual(s.calls[1].scope.args, ['a.b', b]);
   });
 
   it('emits "removeFilter" for all listeners', function () {
