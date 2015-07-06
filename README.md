@@ -115,6 +115,8 @@ gf.emit('foo.bar', function (callback) {
 - `removeFilter(event, fn)`: Unregisters a filter for an event
 - `removeAllFilters([event])`: Unregisters all filters, or all filters
   for the given event. Matching rules are not applied.
+- `removeMatchingFilters(event)`: Unregister all filters matching the given
+  event name as described in the [glob-tree match expressions][].
 - `filters([event][, options])`: Returns all filters, or all filters
   for the given event. Matching rules are applied on the event name as
   described in the [glob-tree match expressions][].
