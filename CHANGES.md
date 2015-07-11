@@ -1,5 +1,9 @@
 # Changes
 
+## 1.3.0
+
+- Expose `emitter` in scope
+
 ## 1.2.0
 
 - Add `removeMatchingFilters(event)`
