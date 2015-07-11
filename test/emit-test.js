@@ -229,6 +229,15 @@ describe('emit', function () {
     assert.deepEqual(l.calls[0].scope.args, []);
   });
 
+  it('sets emitter on scope to this', function () {
+    var l = util.stub();
+    e.addFilter('a', l);
+
+    e.emit('a', util.noop());
+
+    assert.strictEqual(l.calls[0].scope.emitter, e);
+  });
+
   it('does not invoke callback if filter does not yield', function () {
     e.addFilter('a', function (next, callback) {
       /*jslint unparam: true*/
